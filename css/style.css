@@ -1,0 +1,351 @@
+/* Import Google Fonts for modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #2d3748;
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    font-weight: 300;
+    position: relative;
+    z-index: 1;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+/* Seções */
+section {
+    background: white;
+    margin: 30px 0;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    color: #1a365d;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: 600;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #1a365d, #2d3748);
+    border-radius: 2px;
+}
+
+/* Avatar */
+.avatar {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0;
+    border: 5px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+/* About section layout */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row-reverse;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #4a5568;
+}
+
+/* Texto tênue */
+.muted {
+    color: #718096;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+/* Projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.project {
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #1a365d, #2d3748);
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(26, 54, 93, 0.2);
+    border-color: #cbd5e0;
+}
+
+.project h3 {
+    color: #1a365d;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.project p {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.card h3 {
+    color: #1a365d;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Email Buttons */
+.email-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.btn-primary, button {
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26, 54, 93, 0.3);
+}
+
+.btn-primary:hover, button:hover {
+    background: linear-gradient(135deg, #2d3748 0%, #1a365d 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 54, 93, 0.4);
+}
+
+/* Links Sociais */
+.social-links {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #1a365d;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.social-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #1a365d;
+    transition: width 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #2d3748;
+}
+
+.social-links a:hover::after {
+    width: 100%;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+footer p {
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 25px;
+        margin: 20px 0;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .email-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .social-links {
+        gap: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
