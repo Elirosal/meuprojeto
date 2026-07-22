@@ -34,7 +34,7 @@ body{
   font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  background:linear-gradient(180deg,var(--bg) 0%, #071022 100%);
+  "background-color:LightGray;";
   color:var(--text);
   line-height:1.5;
   font-size:16px;
