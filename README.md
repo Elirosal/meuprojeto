@@ -54,6 +54,6 @@ Para garantir que as imagens (como a foto de perfil) apareçam corretamente no s
 
 Gostou do meu trabalho? Vamos conversar!
 
-- **LinkedIn:** [Eli Rosal](www.linkedin.com/in/elirosal)
+- **LinkedIn:** [Eli Rosal][(www.linkedin.com/in/elirosal)]
 - **E-mail:** [ferraze86@gmail.com]
 - **GitHub:** [@Elirosal ](
