@@ -1,3 +1,187 @@
+/* ==========================
+   CSS moderno, robusto e responsivo
+   Substitui styles anteriores com variáveis, layout e utilitários
+   ========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg: #0f1724;
+  --surface: #0b1220;
+  --card: #0f1724;
+  --muted: #9ca3af;
+  --text: #e6eef8;
+  --primary: #2563eb;
+  --primary-600: #1e40af;
+  --accent: #06b6d4;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --glass: rgba(255,255,255,0.04);
+  --radius-sm: 8px;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 4px 14px rgba(2,6,23,0.6);
+  --shadow-lg: 0 10px 40px rgba(2,6,23,0.8);
+  --max-width: 1200px;
+}
+
+/* Reset moderno */
+*{box-sizing:border-box;margin:0;padding:0}
+::selection{background:var(--primary);color:#fff}
+html,body,#root{height:100%}
+
+body{
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  background:linear-gradient(180deg,var(--bg) 0%, #071022 100%);
+  color:var(--text);
+  line-height:1.5;
+  font-size:16px;
+  -webkit-tap-highlight-color:transparent;
+}
+
+/* Layout container */
+.container{
+  width:100%;
+  max-width:var(--max-width);
+  margin:var(--gutter,24px) auto;
+  padding:24px;
+}
+
+/* Site header + navigation */
+.site-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px 24px;
+  background:linear-gradient(90deg,var(--surface), rgba(11,18,32,0.8));
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+}
+.site-brand{
+  display:flex;align-items:center;gap:14px;
+}
+.logo{width:48px;height:48px;border-radius:10px;object-fit:cover}
+.site-title{font-weight:600;font-size:1.05rem;color:var(--text)}
+.site-sub{font-size:.85rem;color:var(--muted)}
+
+.nav{display:flex;align-items:center;gap:12px}
+.nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;transition:all .18s}
+.nav a:hover,.nav a:focus{background:var(--glass);color:var(--text);outline:none}
+
+/* Mobile: simple collapse */
+.nav-toggle{display:none}
+.nav-toggle-label{display:none}
+
+/* Hero / header banner */
+.hero{
+  margin-top:18px;
+  padding:28px;
+  border-radius:var(--radius-lg);
+  background:linear-gradient(180deg, rgba(37,99,235,0.08), rgba(14,165,233,0.03));
+  box-shadow:var(--shadow-lg);
+}
+.hero h1{font-size:1.6rem;margin-bottom:6px}
+.hero p{color:var(--muted);font-size:0.98rem}
+
+/* Compat: estilo para `header` e imagem existente no HTML */
+header{
+  text-align:center;
+  padding:28px 20px;
+  border-radius:var(--radius);
+  background:transparent;
+}
+.imagem-estilizada{
+  display:block;
+  width:140px;
+  height:140px;
+  margin:14px auto;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid rgba(255,255,255,0.06);
+  box-shadow:0 8px 26px rgba(2,6,23,0.6);
+}
+@media (max-width:520px){
+  .imagem-estilizada{width:110px;height:110px}
+}
+
+/* Main content grid */
+.layout{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:20px;
+  margin-top:20px;
+}
+
+.sidebar{
+  background:rgba(255,255,255,0.02);
+  padding:18px;border-radius:var(--radius);
+  border:1px solid rgba(255,255,255,0.03);
+}
+.main{
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+  padding:18px;border-radius:var(--radius);
+}
+
+/* Cards */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:var(--shadow-sm)}
+.card + .card{margin-top:12px}
+
+/* Typography helpers */
+h1,h2,h3{color:var(--text);margin:0 0 8px 0}
+h2{font-size:1.05rem;color:var(--primary)}
+p.lead{color:var(--muted);font-size:1rem}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;padding:10px 14px;border-radius:10px;font-weight:600}
+.btn-primary{background:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(37,99,235,0.12)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
+.btn:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:2px}
+
+/* Form elements */
+input[type="text"],input[type="email"],textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:var(--text);font-size:0.98rem}
+label{display:block;margin-bottom:8px;color:var(--muted);font-size:0.9rem}
+
+/* Utility classes */
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+.flex{display:flex}
+.items-center{align-items:center}
+.gap-8{gap:8px}
+
+/* Lists and skills */
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
+
+/* Footer */
+footer{margin-top:24px;padding:18px;text-align:center;color:var(--muted);font-size:.92rem}
+
+/* Accessibility helpers */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* Responsive adjustments */
+@media (max-width:980px){
+  .layout{grid-template-columns:1fr}
+  .site-header{flex-direction:column;align-items:flex-start}
+  .nav{width:100%;justify-content:flex-start;flex-wrap:wrap}
+}
+@media (max-width:520px){
+  .container{padding:12px}
+  .hero h1{font-size:1.2rem}
+  .site-title{font-size:.98rem}
+  .logo{width:42px;height:42px}
+}
+
+/* Utility responsive spacing */
+.stack{display:flex;flex-direction:column;gap:12px}
+
+/* Minor theme helpers for quick color variants */
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:700}
+
+/* End of stylesheet */
+
 /* Importa uma fonte moderna */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
