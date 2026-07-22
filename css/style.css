@@ -22,12 +22,11 @@
 
 body {
     font-family: "Inter", sans-serif;
-    background: linear-gradient(135deg, #111827, #1f2937);
+    background: #111827; /* fundo escuro */
     color: var(--text);
     line-height: 1.7;
     padding: 40px 20px;
 }
-
 .container {
     max-width: 1000px;
     margin: auto;
