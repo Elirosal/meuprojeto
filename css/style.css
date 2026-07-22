@@ -34,7 +34,7 @@ body{
   font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  "background-color:LightGray;";
+  background-color:var(--bg);
   color:var(--text);
   line-height:1.5;
   font-size:16px;
@@ -137,7 +137,7 @@ p.lead{color:var(--muted);font-size:1rem}
 /* Buttons */
 .btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;padding:10px 14px;border-radius:10px;font-weight:600}
 .btn-primary{background:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(37,99,235,0.12)}
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
+.btn-ghost{background:transparent;border:1px solid rgba(230, 220, 220, 0.04);color:var(--text)}
 .btn:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:2px}
 
 /* Form elements */
@@ -175,7 +175,7 @@ footer{margin-top:24px;padding:18px;text-align:center;color:var(--muted);font-si
 }
 
 /* Utility responsive spacing */
-.stack{display:flex;flex-direction:column;gap:12px}
+.stack{display:flex;flex-direction:column;gap:13px}
 
 /* Minor theme helpers for quick color variants */
 .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:700}
@@ -261,7 +261,7 @@ header p {
 
 .sidebar {
     background: #1f2937;
-    color: #fff;
+    color: #050101;
 }
     padding: 35px;
     border-right: 1px solid #374151;
