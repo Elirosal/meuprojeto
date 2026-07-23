@@ -9,8 +9,8 @@
   --bg: #0f1724;
   --surface: #0b1220;
   --card: #0f1724;
-  --muted: #9ca3af;
-  --text: #e6eef8;
+  --muted: #4c6286;
+  --text: #5d6e81;
   --primary: #2563eb;
   --primary-600: #1e40af;
   --accent: #06b6d4;
@@ -27,14 +27,13 @@
 
 /* Reset moderno */
 *{box-sizing:border-box;margin:0;padding:0}
-::selection{background:var(--primary);color:#fff}
+::selection{background:var(--primary);color:#5a2424}
 html,body,#root{height:100%}
 
 body{
   font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  background-color:var(--bg);
   color:var(--text);
   line-height:1.5;
   font-size:16px;
@@ -137,7 +136,7 @@ p.lead{color:var(--muted);font-size:1rem}
 /* Buttons */
 .btn{display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;padding:10px 14px;border-radius:10px;font-weight:600}
 .btn-primary{background:var(--primary);color:#fff;box-shadow:0 6px 18px rgba(37,99,235,0.12)}
-.btn-ghost{background:transparent;border:1px solid rgba(230, 220, 220, 0.04);color:var(--text)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text)}
 .btn:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:2px}
 
 /* Form elements */
@@ -153,7 +152,7 @@ label{display:block;margin-bottom:8px;color:var(--muted);font-size:0.9rem}
 
 /* Lists and skills */
 .skills{display:flex;flex-wrap:wrap;gap:8px}
-.skill{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
+.skill{background:rgba(60, 65, 66, 0.486);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600}
 
 /* Footer */
 footer{margin-top:24px;padding:18px;text-align:center;color:var(--muted);font-size:.92rem}
@@ -175,26 +174,29 @@ footer{margin-top:24px;padding:18px;text-align:center;color:var(--muted);font-si
 }
 
 /* Utility responsive spacing */
-.stack{display:flex;flex-direction:column;gap:13px}
+.stack{display:flex;flex-direction:column;gap:12px}
 
 /* Minor theme helpers for quick color variants */
 .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:700}
 
-/* Sections e content styling */
-section{margin-bottom:24px;padding:16px;background:rgba(255,255,255,0.01);border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03)}
-section h2{margin-top:0;color:var(--primary);font-size:1.1rem;margin-bottom:12px}
-section p{color:var(--muted);line-height:1.6;margin-bottom:8px}
-section ul{margin-left:16px;color:var(--muted)}
-section ul li{margin-bottom:6px}
-
-h4{color:var(--text);font-size:0.95rem;margin:8px 0}
-
-.job{background:rgba(255,255,255,0.01);padding:12px;border-left:3px solid var(--primary);margin-bottom:12px;border-radius:4px}
-.job h3{margin:0 0 4px 0;color:var(--text);font-size:1rem}
-.job span{display:inline-block;font-size:0.85rem;color:var(--accent);margin-bottom:6px}
-.job p{margin:6px 0;color:var(--muted);font-size:0.95rem}
-
 /* End of stylesheet */
+
+/* Importa uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --bg: #0f1724;
+  --surface: #0b1220;
+  --card: #0f1724;
+  --muted: #cad3e1;
+  --text: #e6eef8;
+  --primary: #2563eb;
+  --primary-600: #1e40af;
+  --accent: #06b6d4;
+  --success: #16a34a;
+  --danger: #ef4444;
+  --glass: rgba(255,255,255,0.04);
+  --radius-sm: 8px;
   --radius: 12px;
   --radius-lg: 20px;
   --shadow-sm: 0 4px 14px rgba(2,6,23,0.6);
@@ -257,12 +259,10 @@ header p {
 }
 
 .sidebar {
-    background: #1f2937;
-    color: #050101;
+    background: #020f21;
+    color: #bcadad;
 }
-    padding: 35px;
-    border-right: 1px solid #374151;
-}
+
 .main {
     padding: 35px;
 }
@@ -333,7 +333,7 @@ ul li {
 }
 
 .skill {
-    background: #dbeafe;
+    background: #363a41;
     color: var(--secondary);
     padding: 8px 14px;
     border-radius: 30px;
