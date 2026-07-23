@@ -20,7 +20,7 @@ As seguintes ferramentas e linguagens foram usadas na construção deste projeto
 
 - [HTML5](https://mozilla.org) - Estruturação do conteúdo.
 - [CSS3](https://mozilla.org) - Estilização e layout responsivo.
-- [Netlify](https://netlify.com) - Hospedagem e deploy automatizado.
+
 
 ---
 
